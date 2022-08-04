@@ -1,12 +1,9 @@
 const request = require('request');
 const fs = require('fs');
-const http = require("http");
 
 if (process.argv.length === 4) {
   const domain = process.argv[2];
   const path = process.argv[3];
-
-
 
   request(domain, function (error, response, body) {
     console.error('error:', error); // Print the error if one occurred
@@ -24,6 +21,5 @@ if (process.argv.length === 4) {
         }
       })
     }
-  }
-  );
+  });
 }
